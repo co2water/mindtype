@@ -3,15 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MindType - MBTI Personality Analysis. Discover your 32-type personality through scientific tests.">
-<meta property="og:title" content="MindType - MBTI Personality Analysis">
-<meta property="og:description" content="Discover your 32-type MBTI personality. 105 questions, 8-module deep report, 64 unique avatars. Take the test now!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://co2water.github.io/mindtype/">
-<meta property="og:site_name" content="MindType">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MindType - MBTI Personality Analysis">
-<meta name="twitter:description" content="Discover your 32-type MBTI personality. Take the test now!">
+<meta name="description" content="MindType - MBTI Personality Analysis. Discover your 32-type personality.">
 <title>MindType - MBTI Personality Analysis</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -75,7 +67,7 @@ const I18N={
     cog1:"主导功能",cog1d:"内倾直觉 (Ni) — 深层洞察与远见",cog2:"辅助功能",cog2d:"外倾情感 (Fe) — 感知他人情绪与需求",cog3:"第三功能",cog3d:"内倾思考 (Ti) — 内在逻辑分析",cog4:"劣势功能",cog4d:"外倾感觉 (Se) — 对当下感官体验的觉察",
     fam1:"甘地 — 以非暴力改变世界",fam2:"马丁·路德·金 — 理想主义的实践者",fam3:"荣格 — 深层心理学的开拓者",fam4:"妮可·基德曼 — 内敛而充满力量",fam5:"甘道夫（魔戒）— 智慧的引导者",
     cmp1:"vs INFP",cmp1d:"INFJ 更注重外部和谐 (Fe)，INFP 更注重内在价值 (Fi)",cmp2:"vs INTJ",cmp2d:"都以 Ni 主导，但 INFJ 偏情感决策，INTJ 偏逻辑决策",cmp3:"A 型 vs T 型",cmp3d:"A 型更自信稳定，T 型更敏感但也更有自我觉察力",
-    dimEL:"E 外向",dimER:"I 内向",dimSL:"S 感觉",dimSR:"N 直觉",dimTL:"T 思考",dimTR:"F 情感",dimJL:"J 判断",dimJR:"P 感知",dimAL:"A 自信",dimAR:"T 动荡",shareResult:"分享我的结果",testHistory:"测试记录",noHistory:"还没有测试记录",
+    dimEL:"E 外向",dimER:"I 内向",dimSL:"S 感觉",dimSR:"N 直觉",dimTL:"T 思考",dimTR:"F 情感",dimJL:"J 判断",dimJR:"P 感知",dimAL:"A 自信",dimAR:"T 动荡",testHistory:"测试记录",noHistory:"还没有测试记录",
   },
   "zh-TW":{
     splash:"探索你的 32 型人格",hi:"嗨，",explorer:"探索者",startExplore:"開始探索你的人格",testNow:"立即測試",startTest:"開始測試",aiCompanion:"AI 陪伴",
@@ -104,7 +96,7 @@ const I18N={
     cog1:"主導功能",cog1d:"內傾直覺 (Ni) — 深層洞察與遠見",cog2:"輔助功能",cog2d:"外傾情感 (Fe) — 感知他人情緒與需求",cog3:"第三功能",cog3d:"內傾思考 (Ti) — 內在邏輯分析",cog4:"劣勢功能",cog4d:"外傾感覺 (Se) — 對當下感官體驗的覺察",
     fam1:"甘地 — 以非暴力改變世界",fam2:"馬丁·路德·金 — 理想主義的實踐者",fam3:"榮格 — 深層心理學的開拓者",fam4:"妮可·乔德曼 — 內斂而充滿力量",fam5:"甘道夫（魔戒）— 智慧的引導者",
     cmp1:"vs INFP",cmp1d:"INFJ 更注重外部和諧 (Fe)，INFP 更注重內在價值 (Fi)",cmp2:"vs INTJ",cmp2d:"都以 Ni 主導，但 INFJ 偏情感決策，INTJ 偏邏輯決策",cmp3:"A 型 vs T 型",cmp3d:"A 型更自信穩定，T 型更敏感但也更有自我覺察力",
-    dimEL:"E 外向",dimER:"I 內向",dimSL:"S 感覺",dimSR:"N 直覺",dimTL:"T 思考",dimTR:"F 情感",dimJL:"J 判斷",dimJR:"P 感知",dimAL:"A 自信",dimAR:"T 動盪",shareResult:"分享我的結果",testHistory:"測試記錄",noHistory:"還沒有測試記錄",
+    dimEL:"E 外向",dimER:"I 內向",dimSL:"S 感覺",dimSR:"N 直覺",dimTL:"T 思考",dimTR:"F 情感",dimJL:"J 判斷",dimJR:"P 感知",dimAL:"A 自信",dimAR:"T 動盪",testHistory:"測試記錄",noHistory:"還沒有測試記錄",
   },
   en:{
     splash:"Explore Your 32 Personality Types",hi:"Hi, ",explorer:"Explorer",startExplore:"Start Exploring Your Personality",testNow:"Take Test",startTest:"Start Test",aiCompanion:"AI Chat",
@@ -133,7 +125,7 @@ const I18N={
     cog1:"Dominant",cog1d:"Introverted Intuition (Ni) — Deep insight and foresight",cog2:"Auxiliary",cog2d:"Extraverted Feeling (Fe) — Sensing others' emotions",cog3:"Tertiary",cog3d:"Introverted Thinking (Ti) — Internal logical analysis",cog4:"Inferior",cog4d:"Extraverted Sensing (Se) — Present-moment awareness",
     fam1:"Gandhi — Changed the world with non-violence",fam2:"Martin Luther King Jr. — Idealism in action",fam3:"Carl Jung — Pioneer of deep psychology",fam4:"Nicole Kidman — Quiet yet powerful",fam5:"Gandalf (LOTR) — Wise guide",
     cmp1:"vs INFP",cmp1d:"INFJ focuses on external harmony (Fe), INFP on inner values (Fi)",cmp2:"vs INTJ",cmp2d:"Both Ni-dominant, but INFJ prefers feeling, INTJ prefers thinking",cmp3:"A vs T type",cmp3d:"A-type is more confident; T-type is more sensitive but self-aware",
-    dimEL:"E Extraverted",dimER:"I Introverted",dimSL:"S Sensing",dimSR:"N Intuition",dimTL:"T Thinking",dimTR:"F Feeling",dimJL:"J Judging",dimJR:"P Perceiving",dimAL:"A Assertive",dimAR:"T Turbulent",shareResult:"Share My Result",testHistory:"Test History",noHistory:"No test history yet",
+    dimEL:"E Extraverted",dimER:"I Introverted",dimSL:"S Sensing",dimSR:"N Intuition",dimTL:"T Thinking",dimTR:"F Feeling",dimJL:"J Judging",dimJR:"P Perceiving",dimAL:"A Assertive",dimAR:"T Turbulent",testHistory:"Test History",noHistory:"No test history yet",
   },
   ja:{
     splash:"32タイプの性格を探索",hi:"こんにちは、",explorer:"探索者",startExplore:"性格の探索を始めよう",testNow:"テスト開始",startTest:"テスト開始",aiCompanion:"AIチャット",
@@ -162,7 +154,7 @@ const I18N={
     cog1:"主機能",cog1d:"内向的直観 (Ni) — 深い洞察と先見性",cog2:"補助機能",cog2d:"外向的感情 (Fe) — 他者の感情とニーズを感知",cog3:"第三機能",cog3d:"内向的思考 (Ti) — 内的論理分析",cog4:"劣等機能",cog4d:"外向的感覚 (Se) — 現在の感覚体験への気づき",
     fam1:"ガンジー — 非暴力で世界を変えた",fam2:"マーティン・ルーサー・キング — 理想主義の実践者",fam3:"ユング — 深層心理学の開拓者",fam4:"ニコール・キッドマン — 静かで力強い",fam5:"ガンダルフ（指輪物語）— 知恵の導き手",
     cmp1:"vs INFP",cmp1d:"INFJは外的調和(Fe)を重視、INFPは内的価値(Fi)を重視",cmp2:"vs INTJ",cmp2d:"共にNi主導だが、INFJは感情重視、INTJは論理重視",cmp3:"A型 vs T型",cmp3d:"A型はより自信的、T型はより敏感だが自己認識力が高い",
-    dimEL:"E 外向",dimER:"I 内向",dimSL:"S 感覚",dimSR:"N 直観",dimTL:"T 思考",dimTR:"F 感情",dimJL:"J 判断",dimJR:"P 知覚",dimAL:"A 自信",dimAR:"T 動揺",shareResult:"結果をシェア",testHistory:"テスト履歴",noHistory:"テスト履歴はまだありません",
+    dimEL:"E 外向",dimER:"I 内向",dimSL:"S 感覚",dimSR:"N 直観",dimTL:"T 思考",dimTR:"F 感情",dimJL:"J 判断",dimJR:"P 知覚",dimAL:"A 自信",dimAR:"T 動揺",testHistory:"テスト履歴",noHistory:"テスト履歴はまだありません",
   },
 };
 
@@ -378,35 +370,6 @@ function App(){
   const nickRef=React.useRef(null);
   const[pendingMode,setPendingMode]=React.useState(null);
 
-  // Build share URL with result encoded in hash
-  const getShareUrl=()=>{
-    if(!res)return window.location.href;
-    var base=window.location.origin+window.location.pathname;
-    var data=res.type+"|"+res.dims.EI+"|"+res.dims.SN+"|"+res.dims.TF+"|"+res.dims.JP+"|"+res.dims.AT;
-    return base+"#r="+encodeURIComponent(data);
-  };
-  const getShareText=()=>{
-    if(!res)return"";
-    var d=res.dims;var typeName=tn(res.base);var variant=res.variant==="A"?L.conf:L.turb;
-    return L.shareResult+": "+res.type+" ("+typeName+" · "+variant+")\n\nE/I: "+(100-d.EI)+"%/"+ d.EI+"%  S/N: "+(100-d.SN)+"%/"+d.SN+"%\nT/F: "+(100-d.TF)+"%/"+d.TF+"%  J/P: "+(100-d.JP)+"%/"+d.JP+"%\nA/T: "+(100-d.AT)+"%/"+d.AT+"%\n\n#MindType #MBTI";
-  };
-
-  // Read shared result from URL hash on load
-  React.useEffect(()=>{
-    try{
-      var hash=window.location.hash;
-      if(hash&&hash.indexOf("#r=")===0){
-        var data=decodeURIComponent(hash.substring(3)).split("|");
-        if(data.length===6){
-          var tp=data[0];var bs=tp.split("-")[0];var vr=tp.split("-")[1]||"A";
-          var dims={EI:parseInt(data[1]),SN:parseInt(data[2]),TF:parseInt(data[3]),JP:parseInt(data[4]),AT:parseInt(data[5])};
-          setRes({type:tp,base:bs,variant:vr,dims:dims});
-          setLang(lang||"zh");
-          setSc("result");setRTab(0);
-        }
-      }
-    }catch(e){}
-  },[]);
 
   React.useEffect(()=>{if(sc==="splash"){const t=setTimeout(()=>setSc(lang?"onboarding":"langSelect"),2000);return()=>clearTimeout(t)}},[sc,lang]);
 
@@ -417,7 +380,6 @@ function App(){
   const startFull=()=>{if(!profile){setPendingMode("full");setSc("profileSetup");return}doStartTest("full")};
   const answerQ=(c)=>{const q=shuffledQs[tQ];const na=[...ans,{dim:q.dim,choice:c}];setAns(na);if(tQ<shuffledQs.length-1)setTQ(tQ+1);else{const r=calc(na);setRes(r);setHistory(h=>[{...r,mode:testMode,date:new Date().toLocaleDateString()},...h]);setSc("result");setRTab(0)}};
 
-  const[showShare,setShowShare]=React.useState(null);
 
   const pv=bdYear&&bdMonth&&bdDay&&pro.gender;
 
@@ -461,8 +423,7 @@ function App(){
       {rTab===6&&<div><div style={{fontSize:15,fontWeight:700,marginBottom:8}}>{L.famous}</div>{[L.fam1,L.fam2,L.fam3,L.fam4,L.fam5].map((s,i)=><div key={i} style={{padding:10,background:`${T.accent}08`,borderRadius:10,marginBottom:6,fontSize:12}}>⭐ {s}</div>)}</div>}
       {rTab===7&&<div><div style={{fontSize:15,fontWeight:700,marginBottom:8}}>{L.comparison}</div>{[[L.cmp1,L.cmp1d],[L.cmp2,L.cmp2d],[L.cmp3,L.cmp3d]].map(([t,d],i)=><div key={i} style={{padding:10,background:T.lightGray,borderRadius:10,marginBottom:6}}><div style={{fontSize:13,fontWeight:600}}>{t}</div><div style={{fontSize:11,color:T.gray}}>{d}</div></div>)}</div>}
     </div>
-    <div style={{padding:"10px 14px",flexShrink:0}}><div style={{fontSize:13,fontWeight:600,color:T.dark,textAlign:"center",marginBottom:8}}>{L.shareResult}</div><div style={{display:"flex",justifyContent:"center",gap:16}}><div onClick={()=>setShowShare("fb")} style={{width:44,height:44,borderRadius:"50%",background:"#1877F2",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",color:"#fff",fontSize:20,fontWeight:700}}>f</div><div onClick={()=>setShowShare("ig")} style={{width:44,height:44,borderRadius:"50%",background:"linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",color:"#fff",fontSize:18,fontWeight:700}}>IG</div><div onClick={()=>setShowShare("x")} style={{width:44,height:44,borderRadius:"50%",background:"#000",display:"flex",alignItems:"center",justifyContent:"center",cursor:"pointer",color:"#fff",fontSize:16,fontWeight:700}}>𝕏</div></div></div>
-    {showShare&&(()=>{const sg=gG(res.base);const sgn=profile?.gender==="female"?"_girl":"";const sav=AVATARS[res.type+sgn]||AVATARS[res.type];const stn=tn(res.base);const svr=res.variant==="A"?L.conf:L.turb;const sgc=sg.c;const sgn2=sg.n[lang||"zh"]||sg.n.zh;const sd=res.dims;const stxt=getShareText();const surl=getShareUrl();return(<div onClick={()=>setShowShare(null)} style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.6)",zIndex:9999,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:16}}><div onClick={e=>e.stopPropagation()} style={{background:"#fff",borderRadius:20,width:"100%",maxWidth:340,overflow:"hidden",boxShadow:"0 8px 30px rgba(0,0,0,0.3)"}}><div style={{background:sgc,padding:20,textAlign:"center",color:"#fff"}}>{sav&&<img src={sav} style={{width:60,height:60,borderRadius:"50%",border:"3px solid rgba(255,255,255,0.7)",objectFit:"cover",display:"block",margin:"0 auto 8px"}}/>}<div style={{fontSize:22,fontWeight:900,letterSpacing:2}}>{res.type}</div><div style={{fontSize:13,fontWeight:600,marginTop:3}}>{stn} · {svr}</div><div style={{fontSize:10,opacity:0.8,marginTop:2}}>{sgn2} · {L.pctPop} {POP[res.base]||"3-5%"}</div></div><div style={{padding:16}}>{[[L.dimEL,L.dimER,sd.EI,"#4F46E5"],[L.dimSL,L.dimSR,sd.SN,"#059669"],[L.dimTL,L.dimTR,sd.TF,"#DC2626"],[L.dimJL,L.dimJR,sd.JP,"#D97706"],[L.dimAL,L.dimAR,sd.AT,"#7C3AED"]].map(function(dd,i){var lv=100-dd[2];return(<div key={i} style={{marginBottom:6}}><div style={{display:"flex",justifyContent:"space-between",fontSize:9,color:"#666"}}><span>{dd[0]} {lv}%</span><span>{dd[2]}% {dd[1]}</span></div><div style={{height:5,borderRadius:3,display:"flex",background:"#e8ecf0",marginTop:2}}><div style={{width:lv+"%",background:dd[2]<50?dd[3]:dd[3]+"44",borderRadius:3}}/><div style={{width:dd[2]+"%",background:dd[2]>=50?dd[3]:dd[3]+"44",borderRadius:3}}/></div></div>)})}<div style={{textAlign:"center",marginTop:10,paddingTop:8,borderTop:"1px solid #eee"}}><div style={{fontSize:14,fontWeight:700}}>MindType</div><div style={{fontSize:9,color:"#94a3b8"}}>MBTI Personality Analysis</div></div></div></div><div onClick={e=>e.stopPropagation()} style={{marginTop:12,display:"flex",gap:8}}>{showShare==="fb"&&<a href={"https://www.facebook.com/sharer/sharer.php?quote="+encodeURIComponent(stxt)} target="_blank" rel="noopener noreferrer" style={{padding:"10px 18px",background:"#1877F2",color:"#fff",borderRadius:10,fontSize:13,fontWeight:600,textDecoration:"none"}}>Share on Facebook</a>}{showShare==="ig"&&<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" style={{padding:"10px 18px",background:"linear-gradient(135deg,#f09433,#dc2743,#bc1888)",color:"#fff",borderRadius:10,fontSize:13,fontWeight:600,textDecoration:"none"}}>Open Instagram</a>}{showShare==="x"&&<a href={"https://x.com/intent/tweet?text="+encodeURIComponent(stxt+"\n"+surl)} target="_blank" rel="noopener noreferrer" style={{padding:"10px 18px",background:"#000",color:"#fff",borderRadius:10,fontSize:13,fontWeight:600,textDecoration:"none"}}>Post on X</a>}</div><div onClick={()=>setShowShare(null)} style={{marginTop:10,color:"#fff",fontSize:14,cursor:"pointer",padding:"8px 20px",background:"rgba(255,255,255,0.15)",borderRadius:8}}>✕ Close</div></div>)})()}
+    </div>)})()}
     </div>)})()}
 
 
