@@ -3,25 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MindType - MBTI Personality Analysis. Discover your 32-type personality through scientific tests.">
+<meta name="description" content="MindType - MBTI Personality Analysis. Discover your 32-type personality.">
 <title>MindType - MBTI Personality Analysis</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Noto Sans TC', 'SF Pro Display', -apple-system, sans-serif; background: linear-gradient(160deg, #f8f9ff, #eef0ff, #f5f3ff); min-height: 100vh; }
+  html, body, #root { min-height: 100vh; width: 100%; }
+  body { font-family: 'Noto Sans TC', 'SF Pro Display', -apple-system, sans-serif; background: #f5f3ff; }
   input::placeholder { color: #94a3b8; }
   select { -webkit-appearance: none; appearance: none; }
   @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
   @keyframes popIn { from { transform: scale(0.5); opacity: 0 } to { transform: scale(1); opacity: 1 } }
   @keyframes pulse { 0%%,100%% { opacity: 0.3; transform: scale(0.8) } 50%% { opacity: 1; transform: scale(1.1) } }
-  @keyframes slideUp { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: #c7c7cc; border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: #a0a0a5; }
+
+  .app-shell {
+    width: 100%%;
+    min-height: 100vh;
+    background: #fff;
+    font-family: 'Noto Sans TC', 'SF Pro Display', sans-serif;
+    position: relative;
+  }
 
   @media (min-width: 768px) {
-    body { display: flex; justify-content: center; padding: 20px 0; }
+    body {
+      background: linear-gradient(160deg, #f0eeff, #e8e6ff, #f5f3ff);
+      display: flex;
+      justify-content: center;
+    }
+    .app-shell {
+      max-width: 600px;
+      box-shadow: 0 0 80px rgba(79,70,229,0.1);
+      border-left: 1px solid #e8e6ff;
+      border-right: 1px solid #e8e6ff;
+    }
   }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -379,12 +395,12 @@ function App(){
   const pv=bdYear&&bdMonth&&bdDay&&pro.gender;
 
 
-  const S=({children})=>(<div style={{width:"100%",maxWidth:480,minHeight:"100vh",background:T.white,position:"relative",fontFamily:T.font,margin:"0 auto",boxShadow:"0 0 60px rgba(79,70,229,0.08)"}}><div style={{minHeight:"100vh",display:"flex",flexDirection:"column"}}>{children}</div></div>);
+  const S=({children})=>(<div className="app-shell"><div style={{minHeight:"100vh",display:"flex",flexDirection:"column"}}>{children}</div></div>);
 
   const qText=(q,field)=>typeof q[field]==="object"?q[field][lang||"zh"]:q[field];
   const qOpt=(q,field)=>typeof q[field]==="object"?(q[field][lang||"zh"]||q[field].zh):q[field];
 
-  return(<div style={{minHeight:"100vh",background:"linear-gradient(160deg,#f8f9ff,#eef0ff,#f5f3ff)",fontFamily:T.font}}>
+  return(<div style={{minHeight:"100vh",fontFamily:T.font}}>
     <style>{`@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;900&display=swap');*{box-sizing:border-box;margin:0;padding:0}input::placeholder{color:#94a3b8}select{-webkit-appearance:none;appearance:none}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes popIn{from{transform:scale(0.5);opacity:0}to{transform:scale(1);opacity:1}}@keyframes pulse{0%,100%{opacity:0.3;transform:scale(0.8)}50%{opacity:1;transform:scale(1.1)}}::-webkit-scrollbar{width:0;height:0}`}</style>
     <S>
     <div style={{height:16,flexShrink:0}}/>
